@@ -40,7 +40,7 @@ export default function SummaryDialog({
           </div>
           
           <div className="w-full sm:w-max mx-auto text-center text-xs sm:text-sm bg-black text-white dark:bg-white dark:text-black px-3 py-2 rounded-full">
-              Notify me about tomorrow's game
+              Notify me about tomorrow&apos;s game
            </div>
         </Dialog.Panel>
       </div>
