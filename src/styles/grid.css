@@ -1,3 +1,11 @@
+/* Header */
+
+.menu-item{
+    @apply text-sm md:text-lg text-black dark:text-white font-bold capitalize mx-2.5;
+} 
+
+
+
 .box-wrapper{
     @apply grid grid-cols-3 mr-5 border border-black dark:border-white;
 }
@@ -5,7 +13,7 @@
     @apply  text-center flex flex-col items-center justify-center cursor-pointer
         w-20 h-20 xs:w-24 xs:h-24 sm:w-32 sm:h-32 md:w-40 md:h-40
         text-sm sm:text-base md:text-lg font-bold
-        bg-white dark:bg-slate-800
+        bg-[#f2ede6] dark:bg-slate-800
          border border-black dark:border-white
          text-black
          hover:bg-[#d9d9d9] dark:hover:bg-gray-700
@@ -21,4 +29,16 @@
     w-20 h-20 xs:w-24 xs:h-24 sm:w-32 sm:h-32 md:w-40 md:h-40
         text-[10px] sm:text-base md:text-lg font-bold
     text-black dark:text-white;
+}
+.grid-title{
+    @apply text-2xl sm:text-4xl font-bold text-center mb-5 text-black dark:text-white
+}
+.grid-score-item{
+    @apply grid grid-cols-2 gap-5 w-full font-bold text-center;
+}
+.grid-score-title{
+    @apply text-base sm:text-xl font-normal text-black dark:text-white
+}
+.grid-score{
+    @apply text-3xl sm:text-5xl text-red
 }

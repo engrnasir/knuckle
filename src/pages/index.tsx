@@ -33,78 +33,71 @@ export default function Home() {
         <span className="text-white"> Click here to be reminded to play tomorrow.</span>
 
       </div>
-      <div className="font-sr flex min-h-screen min-w-max flex-col items-center justify-center bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-white">
-        <div className="font-display flex w-full items-center justify-between px-4 pt-4 text-xl font-bold uppercase tracking-wide">
-          <div className="flex items-center">
-            <div className="ml-2 hidden dark:text-white md:inline">
+      <div className="font-sr flex w-full flex-col items-center justify-center bg-[#f3eee7] text-gray-800 dark:bg-gray-900 dark:text-white">
+        <div className="font-display flex w-full items-center justify-between px-4 pt-5 font-bold uppercase">
+            <a href="#" className="menu-item m-0 mr-5">
               Knuckle Grid
-            </div>
-          </div>
+            </a>
           <div className="flex items-center">
-            <a
-              href="#"
-              className="focus-visible:outline-primary -m-1.5 mr-2 rounded-full p-1.5 transition-colors duration-75 hover:bg-gray-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 dark:hover:bg-gray-700"
-            >
+            <a  href="#"  className="menu-item">
               Twitter
             </a>
-            <button
-              className="mx-0.25 focus-visible:outline-primary -m-1.5 rounded-full p-1.5 transition-colors duration-75 hover:bg-gray-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 dark:hover:bg-gray-700 sm:mx-1 md:mx-2"
-              onClick={() => setIsOpenSummaryDialog(true)}
-            >
+            <button className="menu-item" onClick={() => setIsOpenSummaryDialog(true)}>
               Summary
             </button>
-            <button
-              className="focus-visible:outline-primary -m-1.5 ml-2 rounded-full p-1.5 transition-colors duration-75 hover:bg-gray-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 dark:hover:bg-gray-700 md:mr-4"
-              onClick={() => setIsOpenAboutDialog(true)}
-            >
+            <button className="menu-item" onClick={() => setIsOpenAboutDialog(true)}>
               About
             </button>
           </div>
         </div>
-        <main className="w-max flex flex-col items-start justify-center px-5 py-20">
-          <div className="grid grid-cols-4 ml-5">
-            <p className="grid-item-text"></p>
-            <p className="grid-item-text">BRA</p>
-            <p className="grid-item-text">USA</p>
-            <p className="grid-item-text">WON A CHAMPIONSHIP</p>
+
+        <main className="w-full min-h-screen flex flex-col sm:flex-row items-center justify-center px-5 pb-40">
+          <div className="flex flex-col items-center justify-center">
+            <div className="grid grid-cols-4">
+              <p className="grid-item-text"></p>
+              <p className="grid-item-text">BRA</p>
+              <p className="grid-item-text">USA</p>
+              <p className="grid-item-text">WON A CHAMPIONSHIP</p>
+            </div>
+            <div className="flex  items-center justify-center ">
+            <div className="flex items-center justify-center ">
+              <div className="grid grid-cols-1 mr-5">
+                <p className="grid-item-text">BANTAMWEIGHT</p>
+                <p className="grid-item-text">MIDDLEWEIGHT</p>
+                <p className="grid-item-text">LIGHTWEIGH</p>
+              </div>
+              <div className="box-wrapper">
+                <button className="grid-item">
+                  <div className="filled-item">Fighter Name</div>
+                </button>
+                {Array(8)
+                      .fill(null)
+                      .map((_, i) => (
+                        <button
+                          key={i}
+                          className="grid-item"
+                          onClick={() => {
+                            setIsOpenSearchDialog(true);
+                          }}
+                        >
+                      </button>
+                      ))}
+                {/* <div className="grid-item"></div> */}
+              </div>
+            </div>
+            </div>
+
           </div>
-          <div className="flex flex-col sm:flex-row items-center justify-center ">
-          <div className="flex items-center justify-center ">
-            <div className="grid grid-cols-1 mr-5">
-              <p className="grid-item-text">BANTAMWEIGHT</p>
-              <p className="grid-item-text">MIDDLEWEIGHT</p>
-              <p className="grid-item-text">LIGHTWEIGH</p>
-            </div>
-            <div className="box-wrapper">
-              <button className="grid-item">
-                <div className="filled-item">Fighter Name</div>
-              </button>
-              {Array(8)
-                    .fill(null)
-                    .map((_, i) => (
-                      <button
-                        key={i}
-                        className="grid-item"
-                        onClick={() => {
-                          setIsOpenSearchDialog(true);
-                        }}
-                      >
-                    </button>
-                    ))}
-              {/* <div className="grid-item"></div> */}
-            </div>
-          </div>
-            <div className="text-center mt-5 ">
-              <p className=" text-xs sm:text-base font-medium uppercase">You have</p>
-              <p className="text-6xl sm:text-8xl font-bold uppercase">7</p>
-              <p className=" text-xs sm:text-base font-medium uppercase">Guesses</p>
-              <button
-                className="text-xs text-blue-600 underline dark:text-blue-400"
-                onClick={() => setIsOpenSummaryDialog(true)}
-              >
-                Show Summary
-              </button>        
-            </div>
+          <div className="text-center mt-5 sm:mt-28 ">
+            <p className=" text-xs sm:text-base font-medium uppercase">You have</p>
+            <p className="text-6xl sm:text-8xl font-bold uppercase">7</p>
+            <p className=" text-xs sm:text-base font-medium uppercase">Guesses</p>
+            <button
+              className="text-xs text-blue-600 underline dark:text-blue-400"
+              onClick={() => setIsOpenSummaryDialog(true)}
+            >
+              Show Summary
+            </button>        
           </div>
           
 
@@ -239,14 +232,12 @@ export default function Home() {
             </div>
           </div>
         </main> */}
-        <footer className="mt-8 flex w-screen flex-shrink-0 justify-center border-t bg-white py-6 text-sm text-gray-900 dark:border-gray-950 dark:bg-gray-800">
-          <div className="max-w-5xl px-4 pb-24 text-center sm:px-6">
-            <div className="flex flex-wrap justify-center">Footer links</div>
-            <div className="mt-4 flex flex-wrap justify-center text-xs">
-              More footer links
-            </div>
-            <div className="mt-4 px-4 text-xs text-gray-400">Notes</div>
-          </div>
+
+
+        <footer className="w-full  flex items-center justify-center p-5 bg-white dark:bg-slate-800">
+          <div className="menu-item">Footer links</div>
+          <div className="menu-item">Footer links</div>
+          <div className="menu-item">Footer links</div>
         </footer>
       </div>
       <SearchDialog
