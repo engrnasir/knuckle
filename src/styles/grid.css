@@ -1,0 +1,24 @@
+.box-wrapper{
+    @apply grid grid-cols-3 mr-5 border border-black dark:border-white;
+}
+.grid-item{
+    @apply  text-center flex flex-col items-center justify-center cursor-pointer
+        w-20 h-20 xs:w-24 xs:h-24 sm:w-32 sm:h-32 md:w-40 md:h-40
+        text-sm sm:text-base md:text-lg font-bold
+        bg-white dark:bg-slate-800
+         border border-black dark:border-white
+         text-black
+         hover:bg-[#d9d9d9] dark:hover:bg-gray-700
+         focus:bg-yellow-200
+
+    ;
+}
+.filled-item{
+    @apply bg-green-400 w-full h-full flex items-center justify-center text-center ;
+}
+.grid-item-text{
+    @apply text-center flex items-center justify-center font-bold 
+    w-20 h-20 xs:w-24 xs:h-24 sm:w-32 sm:h-32 md:w-40 md:h-40
+        text-[10px] sm:text-base md:text-lg font-bold
+    text-black dark:text-white;
+}
