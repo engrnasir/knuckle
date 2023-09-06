@@ -14,7 +14,9 @@ export default function SummaryDialog({
       <div className="fixed inset-0 bg-gray-500 bg-opacity-25 transition-opacity dark:bg-white   dark:bg-opacity-50" />
       <div className="fixed inset-0 z-10 overflow-y-auto p-10 py-20 md:py-32">
         <Dialog.Panel className="relative w-full md:w-2/3 mx-auto relative overflow-hidden rounded-xl bg-white px-4 py-10 shadow-2xl  transition-all dark:bg-gray-900">
-          <CloseButton onClick={onClose} />
+          <div className="absolute top-1 -right-4">
+            <CloseButton onClick={onClose} ></CloseButton>
+          </div>
           <Dialog.Title className="grid-title">YOUR STATS </Dialog.Title>
           <div className="grid-score-item mb-5">
             <div>

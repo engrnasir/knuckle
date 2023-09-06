@@ -1,18 +1,18 @@
 /* Header */
 
 .menu-item{
-    @apply text-sm md:text-lg text-black dark:text-white font-bold capitalize mx-2.5;
+    @apply text-xs md:text-lg text-black dark:text-white font-bold capitalize mx-2.5;
 } 
 
 
 
 .box-wrapper{
-    @apply grid grid-cols-3 mr-5 border border-black dark:border-white;
+    @apply min-w-max grid grid-cols-3 mr-5 border border-black dark:border-white;
 }
 .grid-item{
     @apply  text-center flex flex-col items-center justify-center cursor-pointer
-        w-20 h-20 xs:w-24 xs:h-24 sm:w-32 sm:h-32 md:w-40 md:h-40
-        text-sm sm:text-base md:text-lg font-bold
+        w-[65px] h-[65px] xs:w-24 xs:h-24 sm:w-32 sm:h-32 md:w-40 md:h-40
+        text-xs sm:text-base md:text-lg font-bold
         bg-[#f2ede6] dark:bg-slate-800
          border border-black dark:border-white
          text-black
@@ -26,8 +26,8 @@
 }
 .grid-item-text{
     @apply text-center flex items-center justify-center font-bold 
-    w-20 h-20 xs:w-24 xs:h-24 sm:w-32 sm:h-32 md:w-40 md:h-40
-        text-[10px] sm:text-base md:text-lg font-bold
+    w-[65px] h-[65px] xs:w-24 xs:h-24 sm:w-32 sm:h-32 md:w-40 md:h-40
+        text-[9px] sm:text-base md:text-lg font-bold
     text-black dark:text-white;
 }
 .grid-title{
